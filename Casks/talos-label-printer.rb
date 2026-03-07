@@ -1,6 +1,6 @@
 cask "talos-label-printer" do
-  version "1.1.7"
-  sha256 "c73ebc79e913bc2e68967341ef81193e4c27f64475179de75331f47d84046a21"
+  version "1.1.8"
+  sha256 "5c150cb493f7179cc8ca4c86db6b895975910d17b50989203e7963c77f496b0c"
 
   url "https://github.com/kivanccakmak/talos-desktop-tools/releases/download/v#{version}/talos-label-printer-#{version}-arm64.dmg"
   name "Talos Label Printer"
