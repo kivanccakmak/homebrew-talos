@@ -1,26 +1,26 @@
 class Talcli < Formula
   desc "CLI tool for the Talos manufacturing operations platform"
   homepage "https://talos.works"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kivanccakmak/talcli/releases/download/v#{version}/talcli_#{version}_darwin-arm64.tar.gz"
-      sha256 "b40d3e15647ec96e5de4c24c95e9d9d5415af088d8b3a9de89571a6113a20def"
+      sha256 "4808a27e1899837c37cdcc02df8eb4bd17dc056d402edac43b4a6d5366ca0e51"
     else
       url "https://github.com/kivanccakmak/talcli/releases/download/v#{version}/talcli_#{version}_darwin-amd64.tar.gz"
-      sha256 "bb434f7781203373447125cecbeeb483069ad9cee2f670e70c1c5f6899b424e3"
+      sha256 "419af37a2d97c81baa4f9fd5bcfea8c539ed86d7ef109aeed8c0f9064e61ed5c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/kivanccakmak/talcli/releases/download/v#{version}/talcli_#{version}_linux-arm64.tar.gz"
-      sha256 "6536168ca9b1c99b8d0ff02c4fcff3bdabd24ad6d1e2ced578ce211669f1335b"
+      sha256 "4ebc8b77f834b9c4226175526f0e08eb84d1cb256d1498397ce35cfe8a8898fd"
     else
       url "https://github.com/kivanccakmak/talcli/releases/download/v#{version}/talcli_#{version}_linux-amd64.tar.gz"
-      sha256 "a44a2bffdd09e5acd231f17d37c98760379ef3fe1940bc62fcf6125c16f02c19"
+      sha256 "9230d6c18c705707240ac2837369d02d66015919df78625151b235c950a8ce43"
     end
   end
 
