@@ -1,36 +1,42 @@
 class Talcli < Formula
-  desc "CLI tool for the Talos manufacturing operations platform"
+  desc "CLI tool for Talos Works — full CRUD, MCP server, label printing"
   homepage "https://talos.works"
   version "0.7.0"
-  license "MIT"
+  license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kivanccakmak/talcli/releases/download/v#{version}/talcli_#{version}_darwin-arm64.tar.gz"
-      sha256 "4808a27e1899837c37cdcc02df8eb4bd17dc056d402edac43b4a6d5366ca0e51"
+      url "https://github.com/kivanccakmak/talos-desktop-tools/releases/download/v1.1.8/talcli-0.7.0-darwin-arm64"
+      sha256 "64e36eb45977613cc087c6668bb42e20f566c8067f131b8a7294b1b96c7ab91b"
+
+      def install
+        bin.install "talcli-0.7.0-darwin-arm64" => "talcli"
+      end
     else
-      url "https://github.com/kivanccakmak/talcli/releases/download/v#{version}/talcli_#{version}_darwin-amd64.tar.gz"
-      sha256 "419af37a2d97c81baa4f9fd5bcfea8c539ed86d7ef109aeed8c0f9064e61ed5c"
+      url "https://github.com/kivanccakmak/talos-desktop-tools/releases/download/v1.1.8/talcli-0.7.0-darwin-amd64"
+      sha256 "202ec73c1cf418d3b6247c6367a16d828ce136013e448af8ff44bb2f6e81209e"
+
+      def install
+        bin.install "talcli-0.7.0-darwin-amd64" => "talcli"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kivanccakmak/talcli/releases/download/v#{version}/talcli_#{version}_linux-arm64.tar.gz"
-      sha256 "4ebc8b77f834b9c4226175526f0e08eb84d1cb256d1498397ce35cfe8a8898fd"
-    else
-      url "https://github.com/kivanccakmak/talcli/releases/download/v#{version}/talcli_#{version}_linux-amd64.tar.gz"
-      sha256 "9230d6c18c705707240ac2837369d02d66015919df78625151b235c950a8ce43"
-    end
-  end
+      url "https://github.com/kivanccakmak/talos-desktop-tools/releases/download/v1.1.8/talcli-0.7.0-linux-arm64"
+      sha256 "2021129a6f8c93c8c7bd28cb8311b08210bc3cb9d108fd758a92cd8ad0975f3c"
 
-  def install
-    # The tar.gz contains the binary with a platform suffix — rename to just talcli
-    platform_binaries = Dir["talcli-*"]
-    if platform_binaries.any?
-      bin.install platform_binaries.first => "talcli"
+      def install
+        bin.install "talcli-0.7.0-linux-arm64" => "talcli"
+      end
     else
-      bin.install "talcli"
+      url "https://github.com/kivanccakmak/talos-desktop-tools/releases/download/v1.1.8/talcli-0.7.0-linux-amd64"
+      sha256 "4e53a4c078aed3b65d8f5d6974e4cfc1aaadc954352d49cdc50bc1f664f6e569"
+
+      def install
+        bin.install "talcli-0.7.0-linux-amd64" => "talcli"
+      end
     end
   end
 
