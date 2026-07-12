@@ -1,6 +1,6 @@
 cask "talos" do
-  version "2.2.6"
-  sha256 "aae5673c45e177beb7c134a7b8fa189ebec907f35728b5804a2302088bb22400"
+  version "2.2.7"
+  sha256 "172839d472fe5523cd13cad96164c773576e1d2b7f8659ff1d97fc7c0cdf68b5"
 
   url "https://github.com/kivanccakmak/talos-binaries/releases/download/v#{version}/Talos-#{version}-macos-arm64.dmg",
       verified: "github.com/kivanccakmak/talos-binaries/"
