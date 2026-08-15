@@ -6,9 +6,9 @@
 # Brew covers dev boxes + 64-bit hosts (macOS arm64, Linux arm64/amd64). The
 # 32-bit Pi (armv7) install path is apt/curl|sh, not brew.
 class Tedge < Formula
-  desc "Talos Edge appliance: industrial I/O and Tapo C260 counting/PTZ"
+  desc "Talos Edge appliance: industrial I/O and optional camera runtime"
   homepage "https://talos.works"
-  version "0.2.2"
+  version "0.2.4"
   license :cannot_represent
 
   base = "https://github.com/kivanccakmak/talos-binaries/releases/download/v#{version}"
@@ -16,18 +16,18 @@ class Tedge < Formula
   on_macos do
     on_arm do
       url "#{base}/tedge-darwin-arm64"
-      sha256 "48120bc5b14a6dbdf844449c5a4351ef6fd156cfff536ce48462905d0457083d"
+      sha256 "638a89754a1e5afa766815eecd2fbb4b57c848adc98cb6f2dd326566f9fee98f"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}/tedge-linux-arm64"
-      sha256 "ef10d462390f0b83fc55fdf8161f9e83ad0d27e8a2de88f367c756b854eee76a"
+      sha256 "6fd2de1aaa274e588b8d3c85aefd19c816ba94549db9fd38a4a0de27e9cc1f67"
     end
     on_intel do
       url "#{base}/tedge-linux-amd64"
-      sha256 "5f1cadbe54e3e49e1ecc3261041a747311d740be475a6f53d3618b5143e47b76"
+      sha256 "234d573e380c5e9d1fa5b3bdafcff0166c1ad32d71545d3968f9770b5e906273"
     end
   end
 
