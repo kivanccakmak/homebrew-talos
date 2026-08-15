@@ -8,7 +8,7 @@
 class Tedge < Formula
   desc "Talos Edge appliance: industrial I/O and Tapo C250/C260 counting/PTZ"
   homepage "https://talos.works"
-  version "0.2.6"
+  version "0.2.7"
   license :cannot_represent
 
   base = "https://github.com/kivanccakmak/talos-binaries/releases/download/v#{version}"
@@ -16,18 +16,18 @@ class Tedge < Formula
   on_macos do
     on_arm do
       url "#{base}/tedge-darwin-arm64"
-      sha256 "ed823a0aabdb160656e03473f8fcd1cab9aa8e630d71e1bc99acdd5916854ab7"
+      sha256 "00b2e15fc4d451325caefe9791652fc6111a7a82b9fcd32123e3d65504f05145"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}/tedge-linux-arm64"
-      sha256 "e2786c85413dcc339af3a3b6aa1eb90b1ce3e97827c99ea1bb4421f6e62afa5a"
+      sha256 "cf92f07f0f2cc6fa5a7fec1d454c6ab3afe50b67bab15e17295bbd8cd611bee8"
     end
     on_intel do
       url "#{base}/tedge-linux-amd64"
-      sha256 "798b572421f04f8e9509c6eee2b50c935e17dc748c4bc60997706bbd19529705"
+      sha256 "31c65be2a5439045b49afaad64a759fb72121d9d49f14903f313d4a2be917859"
     end
   end
 
