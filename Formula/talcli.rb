@@ -1,43 +1,35 @@
 class Talcli < Formula
-  desc "CLI tool for Talos Works — 500+ MCP tools, label printing, ERP integration"
+  desc "CLI and MCP server for the Talos manufacturing operations platform"
   homepage "https://talos.works"
-  version "2.1.0"
+  version "2.1.2"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kivanccakmak/talos-binaries/releases/download/v2.1.0/talcli_2.1.0_darwin-arm64.tar.gz"
-      sha256 "8de1e7bb871681d5087c85be958c64c30f0cdf2b21be7924c6169e70be33fa92"
+      url "https://github.com/kivanccakmak/talos-binaries/releases/download/v2.1.2/talcli_2.1.2_darwin-arm64.tar.gz"
+      sha256 "8cb608749950bb7996545014824303d0edf919b7cb334523dbe59887c6566228"
 
-      def install
-        bin.install "talcli-darwin-arm64" => "talcli"
-      end
     else
-      url "https://github.com/kivanccakmak/talos-binaries/releases/download/v2.1.0/talcli_2.1.0_darwin-amd64.tar.gz"
-      sha256 "0f4e844ab79fda8314b5a2bdace23b422bdbec45179208eb61cabdef50e9c7dd"
+      url "https://github.com/kivanccakmak/talos-binaries/releases/download/v2.1.2/talcli_2.1.2_darwin-amd64.tar.gz"
+      sha256 "d2e99d1e699107f0a292bac1409b862a1e0ee3d4c71f2d1aa2d27b4a0f529e22"
 
-      def install
-        bin.install "talcli-darwin-amd64" => "talcli"
-      end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kivanccakmak/talos-binaries/releases/download/v2.1.0/talcli_2.1.0_linux-arm64.tar.gz"
-      sha256 "1f15dce3302cb9079f6c932906b5bfe1594cd0512ceb231f380bc260db3b8a96"
+      url "https://github.com/kivanccakmak/talos-binaries/releases/download/v2.1.2/talcli_2.1.2_linux-arm64.tar.gz"
+      sha256 "b635e1ebd4b04af9b88b4746aa354eadbfa74ece56c24c497965ca6471461e76"
 
-      def install
-        bin.install "talcli-linux-arm64" => "talcli"
-      end
     else
-      url "https://github.com/kivanccakmak/talos-binaries/releases/download/v2.1.0/talcli_2.1.0_linux-amd64.tar.gz"
-      sha256 "4ac5c1be2dc77da4b47a08d470e9f8576dad8dd9c246199f85103b73349a9aa3"
+      url "https://github.com/kivanccakmak/talos-binaries/releases/download/v2.1.2/talcli_2.1.2_linux-amd64.tar.gz"
+      sha256 "ff66513452112a0083bdeb189e78ad114d7d79d0bb80f23a3702837e01063bee"
 
-      def install
-        bin.install "talcli-linux-amd64" => "talcli"
-      end
     end
+  end
+
+  def install
+    bin.install "talcli"
   end
 
   test do
