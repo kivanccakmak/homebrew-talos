@@ -16,22 +16,22 @@ class Tedge < Formula
   on_macos do
     on_arm do
       url "#{base}/tedge-darwin-arm64"
-      sha256 "32c9b512ec79101cbefd1870f0d54fc7ed5f28fe8c6d56c805614c3f848f7ae0"
+      sha256 "dab13a28aa1b57a4fcda7e5c224b610d22b259a8526fabc6e49d6dbd3872cfdc"
     end
     on_intel do
       url "#{base}/tedge-darwin-amd64"
-      sha256 "a6c6209308143fadd133584e08625f2c1a70a04d2d10bba3f5b55badf83a131b"
+      sha256 "d7aaf230f03286537d0d19a40fb3b905730aa0fc5afcd6be71a5c710c0d45dcc"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}/tedge-linux-arm64"
-      sha256 "160e7e395128041947e322c6f823e499ab1dc92b5393f661ae547c7fca722d7a"
+      sha256 "90b70349303d3d5a3ca682fa2a360e0df6139dfccc89223fcf16f964254b248a"
     end
     on_intel do
       url "#{base}/tedge-linux-amd64"
-      sha256 "61c38b70ecda22342dea652c021d3be2e2f297aa0702a04558569b33230b1190"
+      sha256 "f20e8d97e79e2fe9de6d390facc51021c201e05e45379a7d2e720c5d84430f84"
     end
   end
 
