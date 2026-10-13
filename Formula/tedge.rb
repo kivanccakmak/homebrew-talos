@@ -8,7 +8,7 @@
 class Tedge < Formula
   desc "Talos Edge appliance for industrial I/O, Observer and Octopus"
   homepage "https://talos.works"
-  version "0.2.17"
+  version "0.2.18"
   license :cannot_represent
 
   base = "https://github.com/kivanccakmak/talos-binaries/releases/download/v#{version}"
@@ -16,22 +16,22 @@ class Tedge < Formula
   on_macos do
     on_arm do
       url "#{base}/tedge-darwin-arm64"
-      sha256 "4f848bf609fb423a3c61f978590d00bcfce3e8bad3f185cb7fd70413f625d50b"
+      sha256 "b280636d8a8bf484dc8a1b437c0dd20c99d8f8364d615d33358e6e6fa7d98b6b"
     end
     on_intel do
       url "#{base}/tedge-darwin-amd64"
-      sha256 "fb782273fd3d6009750aca796591d9801582f049fd293c7a3c6f4ad5d32fd43b"
+      sha256 "1468058e58d58fc9bfa3416b09e8d920604de31d01b678ed46c81bffc60b0bd9"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}/tedge-linux-arm64"
-      sha256 "38c7e4b9a088edc1535528d685faf026a41c854ebb8776d02f987a96e7056625"
+      sha256 "be4603753da238e1c3b83f0bf8e223104abf13391d5ef892eb4bcf159bf7c925"
     end
     on_intel do
       url "#{base}/tedge-linux-amd64"
-      sha256 "6ac1f8c35de6b04676fbcff3dd39e72280cc3242f26eea6d518fbb5259e33719"
+      sha256 "7052ce5e857fd0031a85d99b93a110f4271ee3f322ed9d49d677c65814c29d85"
     end
   end
 
